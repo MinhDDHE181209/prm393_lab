@@ -1,0 +1,17 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Sách: mọi người đọc được; user đã đăng nhập có thể ghi (để app seed lần đầu).
+    // Sau khi seed xong, có thể đổi thành: allow write: if false;
+    match /books/{bookId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Bookmark và tiến độ đọc: chỉ chủ tài khoản anonymous.
+    match /users/{userId}/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}
