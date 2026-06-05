@@ -1,0 +1,24 @@
+name: movie_api_app
+description: "A new Flutter project for Lab 9 - Local JSON Storage."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  path_provider: ^2.1.5  # <-- Thêm thư viện này để tìm đường dẫn lưu file ẩn trong máy
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+ 
+
+  # Khai báo file JSON mẫu nằm trong mục assets (Đếm đúng 2 và 4 dấu cách)
+  assets:
+    - lib/assets/movie.json
