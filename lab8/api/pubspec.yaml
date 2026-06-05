@@ -1,0 +1,22 @@
+name: movie_api_app
+description: "A new Flutter project for Lab 8 - REST API Integration."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Thêm thư viện http để kết nối mạng và gọi REST API (Lab 8.1)
+  http: ^1.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+ 
