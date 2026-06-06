@@ -1,0 +1,29 @@
+name: lab10_full
+description: "A new Flutter project for Lab 10 Authentication and Notifications."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- THƯ VIỆN ĐÃ ĐƯỢC THÊM VÀ CĂN CHỈNH CHUẨN ---
+  http: ^1.1.0                     # Dùng cho API Đăng nhập (Lab 10.2)
+  shared_preferences: ^2.2.2       # Dùng lưu Token / Tự động đăng nhập (Lab 10.3)
+  flutter_local_notifications: ^17.1.0 # Dùng bắn Thông báo Local (Lab 10.5)
+  
+  # Nếu bạn có làm thêm bài Lab 10.4 Firebase Google Sign-In, hãy giữ lại 3 dòng này:
+  firebase_core: ^2.24.0
+  firebase_auth: ^4.15.0
+  google_sign_in: ^6.1.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+
+flutter:
+  uses-material-design: true
